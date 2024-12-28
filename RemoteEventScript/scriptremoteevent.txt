@@ -1,0 +1,9 @@
+local event = game.ReplicatedStorage.Events.RemoteEvent -- это само событие 
+local part = script.Parent -- блок, у которого мы поменяем позицию
+
+event.OnServerEvent:Connect(function() -- получаем событие, которое запущено локальным скриптом
+	
+	part.Position = Vector3.new(math.random(1, 100), math.random(1, 100), math.random(1, 100)) -- меняем позицию блока
+	
+	
+end)

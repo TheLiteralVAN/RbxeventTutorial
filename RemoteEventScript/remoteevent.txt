@@ -1,0 +1,18 @@
+local UserInput = game:GetService("UserInputService") -- сервис для клавиатуры игрока
+local event = game.ReplicatedStorage.Events.RemoteEvent -- это само событие 
+
+
+
+UserInput.InputBegan:Connect(function(input) -- делаем функцию, чтобы проверить, нажал ли игрок на клавиатуру
+	
+	if input.KeyCode == Enum.KeyCode.B then -- проверяем, что это клафиша "B"
+		
+		print("Worked")
+		event:FireServer() --запускаем событие
+		
+		
+	end
+	
+	
+	
+end)
